@@ -17,4 +17,15 @@ class usercontroller extends Controller
         $member->save();
         return redirect('userspage');
     }
+    function list()
+    {
+        $data=member::all();
+        return view('lists',['members'=>$data]);
+    }
+    function delete($id)
+    {
+        $data=member::find($id);
+        $data->delete();
+        return redirect('list');
+    }
 }

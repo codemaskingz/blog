@@ -18,3 +18,5 @@ Route::get('/', function () {
 });
 route::view('userspage','grace');
 route::post('details',[usercontroller::class,'addData']);
+route::get('list',[usercontroller::class,'list']);
+route::get('delete',[usercontroller::class,'delete']);
