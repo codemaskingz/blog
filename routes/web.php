@@ -16,5 +16,5 @@ use App\Http\controllers\usercontroller;
 Route::get('/', function () {
     return view('welcome');
 });
-route::view('again','grace');
+route::view('userspage','grace');
 route::post('details',[usercontroller::class,'addData']);

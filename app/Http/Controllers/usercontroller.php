@@ -15,5 +15,6 @@ class usercontroller extends Controller
         $member->email=$req->email;
         $member->address=$req->address;
         $member->save();
+        return redirect('userspage');
     }
 }
