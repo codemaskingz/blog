@@ -15,7 +15,7 @@ class usercontroller extends Controller
         $member->email=$req->email;
         $member->address=$req->address;
         $member->save();
-        return redirect('userspage');
+        return redirect('');
     }
     function list()
     {
@@ -27,5 +27,13 @@ class usercontroller extends Controller
         $data=member::find($id);
         $data->delete();
         return redirect('list');
+    }
+    function loginhere(Request $req)
+    {
+       $data= $req->input();
+       //note that we store the username in mycode to show the output in the console
+       $req->session()->put('mycode',$data['username']);
+       return redirect('profile');
+       //this is to redirect to the profile page
     }
 }
