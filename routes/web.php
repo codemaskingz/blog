@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\controllers\usercontroller;
 use App\Http\Controllers\examplecontroller;
+use App\Http\Controllers\fileuploadcontroller;
 use App\Http\Controllers\httpcontroller;
 use App\Http\Controllers\userscontroller;
 use App\Http\Controllers\logincontroller;
@@ -41,6 +42,8 @@ route::view('noaccess','noaccess');
 route::view('user','user');
 route::view('profile','profile');
 route::view('addme','add');
+route::view('upload','upload');
+route::post('uploadfile',[fileuploadcontroller::class,'fileupload']);
 
 
 // route::group(['middleware'=>['protectedpage']],function(){
