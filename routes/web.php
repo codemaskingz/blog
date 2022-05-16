@@ -41,6 +41,7 @@ route::view('home','home')->middleware('protectedpage');
 route::view('noaccess','noaccess');
 route::view('user','user');
 route::view('profile','profile');
+route::view('languages','profilee');
 route::view('addme','add');
 route::view('upload','upload');
 route::post('uploadfile',[fileuploadcontroller::class,'fileupload']);
@@ -69,4 +70,10 @@ Route::get('/logout', function () {
         session()->pull('mycode');
     }
     return redirect('user');
+});
+
+
+Route::get('/languages/{lang}', function ($lang) {
+    App::setlocale($lang);
+    return view('profilee');
 });
