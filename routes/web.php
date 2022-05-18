@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\databasecontroller;
 use Illuminate\Support\Facades\Route;
 use App\Http\controllers\usercontroller;
 use App\Http\Controllers\examplecontroller;
@@ -29,7 +30,7 @@ route::view('login','login');
 route::view('userspage','grace');
 route::get('details',[usercontroller::class,'addData']);
 route::post('htreq',[usercontroller::class,'loginhere']);
-route::get('list',[usercontroller::class,'list']);
+route::get('listen',[usercontroller::class,'list']);
 route::get('loads',[userscontroller::class,'ViewLoad']);
 route::get('newpage',[examplecontroller::class,'getdata']);
 route::get('loginpage',[logincontroller::class,'fetchdata']);
@@ -45,7 +46,7 @@ route::view('languages','profilee');
 route::view('addme','add');
 route::view('upload','upload');
 route::post('uploadfile',[fileuploadcontroller::class,'fileupload']);
-
+route::get('list',[databasecontroller::class,'listcollector']);
 
 // route::group(['middleware'=>['protectedpage']],function(){
 //     route::view('user','user');
