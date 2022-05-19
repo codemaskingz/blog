@@ -8,6 +8,7 @@ use App\Http\Controllers\fileuploadcontroller;
 use App\Http\Controllers\httpcontroller;
 use App\Http\Controllers\userscontroller;
 use App\Http\Controllers\logincontroller;
+use App\Http\controllers\saveintodatabasecontroller;
 
 /*
 |--------------------------------------------------------------------------
@@ -47,6 +48,8 @@ route::view('addme','add');
 route::view('upload','upload');
 route::post('uploadfile',[fileuploadcontroller::class,'fileupload']);
 route::get('list',[databasecontroller::class,'listcollector']);
+route::view('getme','addtodatabase');
+route::post('datame',[saveintodatabasecontroller::class,'savetodatabase']);
 
 // route::group(['middleware'=>['protectedpage']],function(){
 //     route::view('user','user');
