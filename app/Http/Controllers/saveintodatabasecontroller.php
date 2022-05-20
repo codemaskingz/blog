@@ -17,7 +17,6 @@ class saveintodatabasecontroller extends Controller
         $req->session()->flash('lastname',$data);
         $members->save();
         return redirect('getme');
-    
     }
     // function addmember(Request $req)
     // {

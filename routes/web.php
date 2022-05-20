@@ -42,12 +42,13 @@ route::view('home','home')->middleware('protectedpage');
 //route::view('user','user')->middleware('protectedpage');;
 route::view('noaccess','noaccess');
 route::view('user','user');
+route::view('listlog','lists');
 route::view('profile','profile');
 route::view('languages','profilee');
 route::view('addme','add');
 route::view('upload','upload');
 route::post('uploadfile',[fileuploadcontroller::class,'fileupload']);
-route::get('list',[databasecontroller::class,'listcollector']);
+route::get('listme',[databasecontroller::class,'listcollector']);
 route::view('getme','addtodatabase');
 route::post('datame',[saveintodatabasecontroller::class,'savetodatabase']);
 

@@ -1,20 +1,25 @@
 <h1>members list</h1>
 <table border="1">
-<tr>
-    <td>id</td>
-    <td>name</td>
-    <td>email</td>
-    <td>address</td>
-    <td>operation</td>
-</tr>
-@foreach($members as $item)
-<tr>
-    <td>{{$item['id']}}</td>
-    <td>{{$item['name']}}</td>
-    <td>{{$item['email']}}</td>
-    <td>{{$item['address']}}</td>
-    <td><a href={{"delete/".$item['id']}}>Delete</a></td>
-</tr>
-@endforeach
+    <tr>
+        <td>id</td>
+        <td>Lastname</td>
+        <td>Firstname</td>
+        <td>Username</td>
+        <td>password</td>
+        <td>Repassword</td>
+        <td>Email</td>
+        <td>Stateoforigin</td>
+    </tr>
 
+    <tr>
+        <td>id</td>
+        <td>Lastname</td>
+        <td>Firstname</td>
+        <td>Username</td>
+        <td>password</td>
+        <td>Repassword</td>
+        <td>Email</td>
+        <td>Stateoforigin</td>
+
+    </tr>
 </table>

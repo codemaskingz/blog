@@ -7,9 +7,9 @@ use Illuminate\Http\Request;
 
 class logincontroller extends Controller
 {
-    //
     function fetchdata()
     {
-        return logindetail::all();
+        $data= logindetail::all();
+        return view('lists',['holder'=>$data]);
     }
 }
