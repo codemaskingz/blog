@@ -35,6 +35,8 @@ route::get('listen',[usercontroller::class,'list']);
 route::get('loads',[userscontroller::class,'ViewLoad']);
 route::get('newpage',[examplecontroller::class,'getdata']);
 route::get('loginpage',[logincontroller::class,'fetchdata']);
+route::get('delete/{id}',[logincontroller::class,'deleteitems']);
+route::get('edit/{id}',[logincontroller::class,'showdata']);
 route::get('httpdata',[httpcontroller::class,'gethttpdata']);
 route::post('getdata',[httpcontroller::class,'addmember']);
 route::post('something',[userscontroller::class,'getsomething']);

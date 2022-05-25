@@ -9,7 +9,21 @@ class logincontroller extends Controller
 {
     function fetchdata()
     {
-        $data= logindetail::all();
+        $data= logindetail::paginate(15);
         return view('lists',['holder'=>$data]);
+    }
+
+    function deleteitems($id)
+    {
+        $data=logindetail::find($id);
+        $data->delete();
+        return redirect('loginpage');
+    }
+    function showdata($id)
+    {
+        $data=logindetail::find($id);
+        return view('editme',['objectholder'=> $data]);
+
+
     }
 }

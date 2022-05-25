@@ -6,4 +6,4 @@
     <td>{{$holder['repassword']}}</td>
     <td>{{$holder['email']}}</td>
     <td>{{$holder['stateoforigin']}}</td>
-    <td><a href={{"delete/".$item['id']}}>Delete</a></td
+    <td><a href={{"delete/".$items['id']}}>Delete</a></td
