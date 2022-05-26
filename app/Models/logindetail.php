@@ -8,5 +8,5 @@ use Illuminate\Database\Eloquent\Model;
 class logindetail extends Model
 {
     use HasFactory;
-    
+    public $timestamps = false;  
 }

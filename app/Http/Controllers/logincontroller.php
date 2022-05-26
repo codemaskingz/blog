@@ -24,6 +24,15 @@ class logincontroller extends Controller
         $data=logindetail::find($id);
         return view('editme',['objectholder'=> $data]);
 
-
     }
+    function correction(Request $req)
+    {
+        $data =logindetail::find($req->id);
+        $data->lastname=$req->lastname;
+        $data->firstname=$req->firstname;
+        $data->username=$req->firstname;
+        $data->save();
+        return redirect('loginpage');
+    }
+
 }
