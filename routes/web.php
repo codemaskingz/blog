@@ -8,7 +8,8 @@ use App\Http\Controllers\fileuploadcontroller;
 use App\Http\Controllers\httpcontroller;
 use App\Http\Controllers\userscontroller;
 use App\Http\Controllers\logincontroller;
-use App\Http\controllers\saveintodatabasecontroller;
+use App\Http\Controllers\saveintodatabasecontroller;
+use App\Http\Controllers\logindetails;
 
 /*
 |--------------------------------------------------------------------------
@@ -38,6 +39,7 @@ route::get('loginpage',[logincontroller::class,'fetchdata']);
 route::get('delete/{id}',[logincontroller::class,'deleteitems']);
 route::get('edit/{id}',[logincontroller::class,'showdata']);
 route::post('uptodate',[logincontroller::class,'correction']);
+route::get('tonight',[logindetails::class,'dboperation']);
 route::get('httpdata',[httpcontroller::class,'gethttpdata']);
 route::post('getdata',[httpcontroller::class,'addmember']);
 route::post('something',[userscontroller::class,'getsomething']);
