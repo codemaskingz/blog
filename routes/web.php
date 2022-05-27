@@ -10,6 +10,7 @@ use App\Http\Controllers\userscontroller;
 use App\Http\Controllers\logincontroller;
 use App\Http\Controllers\saveintodatabasecontroller;
 use App\Http\Controllers\logindetails;
+use App\Http\Controllers\testingdifference;
 
 /*
 |--------------------------------------------------------------------------
@@ -31,6 +32,9 @@ route::view('about','about');
 route::view('login','login');
 route::view('userspage','grace');
 route::get('details',[usercontroller::class,'addData']);
+
+route::get('testam',[testingdifference::class,'testdiff']);
+
 route::post('htreq',[usercontroller::class,'loginhere']);
 route::get('listen',[usercontroller::class,'list']);
 route::get('loads',[userscontroller::class,'ViewLoad']);
