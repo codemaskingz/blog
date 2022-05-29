@@ -11,6 +11,7 @@ use App\Http\Controllers\logincontroller;
 use App\Http\Controllers\saveintodatabasecontroller;
 use App\Http\Controllers\logindetails;
 use App\Http\Controllers\testingdifference;
+use App\Http\Controllers\joincontroller;
 
 /*
 |--------------------------------------------------------------------------
@@ -34,6 +35,7 @@ route::view('userspage','grace');
 route::get('details',[usercontroller::class,'addData']);
 
 route::get('testam',[testingdifference::class,'testdiff']);
+route::get('joinme',[joincontroller::class,'show']);
 
 route::post('htreq',[usercontroller::class,'loginhere']);
 route::get('listen',[usercontroller::class,'list']);
