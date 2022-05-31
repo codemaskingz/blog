@@ -20,7 +20,7 @@ class memberseeder extends Seeder
         //
         DB::table('studentdata')->insert([
             'lastname'=>Str::random(10),
-            'firstname'=>Str::random(10),
+            'firstname'=>Str::random(5),
             'username'=>Str::random(10),
             'address'=>Str::random(10)
         ]);
