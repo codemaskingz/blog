@@ -13,6 +13,7 @@ use App\Http\Controllers\logindetails;
 use App\Http\Controllers\testingdifference;
 use App\Http\Controllers\joincontroller;
 use App\Http\Controllers\AccessorController;
+use App\Http\Controllers\mutatorcontroller;
 
 /*
 |--------------------------------------------------------------------------
@@ -34,6 +35,7 @@ route::view('about','about');
 route::view('login','login');
 route::view('userspage','grace');
 route::get('details',[usercontroller::class,'addData']);
+route::get('muta',[mutatorcontroller::class,'mutators']);
 route::get('accessor',[AccessorController::class,'index']);
 
 route::get('testam',[testingdifference::class,'testdiff']);

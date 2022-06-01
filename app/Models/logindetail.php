@@ -11,22 +11,30 @@ class logindetail extends Model
 {
     use HasFactory;
 
-    public function getLastnameAttribute($value)
-    {
-        return ucFirst($value);
+    // public function getLastnameAttribute($value)
+    // {
+    //     return ucFirst($value);
 
-    }
+    // }
 
-    public function getFirstnameAttribute($value)
-    {
-        return $value. ', OMO ILE IWE OOO';
-    }
+    // public function getFirstnameAttribute($value)
+    // {
+    //     return $value. ', OMO ILE IWE OOO';
+    // }
 
     
-    protected function lastname(): Attribute
+    // protected function lastname(): Attribute
+    // {
+    //     return Attribute::make(
+    //         get: fn ($value) => ucfirst($value),
+    //     );
+    // }
+    protected function setlastnameAttribute($value)
     {
-        return Attribute::make(
-            get: fn ($value) => ucfirst($value),
-        );
+        $this->attributes['lastname'] = "MR ".$value;
+    }
+    protected function setfirstnameAttribute($value)
+    {
+        $this->attributes['firstname'] = $value . " ,FUTA STUDENT";
     }
 }
