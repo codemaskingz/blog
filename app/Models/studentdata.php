@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class studentdata extends Model
 {
     use HasFactory;
-    public $timestamps = false;
+    
     
     protected function setlastnameAttribute($value)
     {

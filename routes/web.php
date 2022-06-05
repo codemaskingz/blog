@@ -14,6 +14,7 @@ use App\Http\Controllers\testingdifference;
 use App\Http\Controllers\joincontroller;
 use App\Http\Controllers\AccessorController;
 use App\Http\Controllers\mutatorcontroller;
+use App\Http\Controllers\onetoonecontroller;
 
 /*
 |--------------------------------------------------------------------------
@@ -54,6 +55,7 @@ route::get('httpdata',[httpcontroller::class,'gethttpdata']);
 route::post('getdata',[httpcontroller::class,'addmember']);
 route::post('something',[userscontroller::class,'getsomething']);
 route::view('home','home')->middleware('protectedpage');
+route::get('one.ng',[onetoonecontroller::class,'oneononerelation']);
 //route::view('user','user')->middleware('protectedpage');;
 route::view('noaccess','noaccess');
 route::view('user','user');
