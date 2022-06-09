@@ -10,8 +10,9 @@ class studentdata extends Model
     use HasFactory;
     
     
-    protected function setlastnameAttribute($value)
-    {
-        $this->attributes['lastname']= 'MR '.$value;
-    }
+    // protected function setlastnameAttribute($value)
+    // {
+    //     $this->attributes['lastname']= 'MR '.$value;
+    // }
+    public $timestamps = false;
 }

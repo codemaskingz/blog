@@ -10,6 +10,7 @@ use Illuminate\Database\Eloquent\Casts\Attribute;
 class logindetail extends Model
 {
     use HasFactory;
+    
 
     // public function getLastnameAttribute($value)
     // {
@@ -29,12 +30,12 @@ class logindetail extends Model
     //         get: fn ($value) => ucfirst($value),
     //     );
     // }
-    protected function setlastnameAttribute($value)
-    {
-        $this->attributes['lastname'] = "MR ".$value;
-    }
-    protected function setfirstnameAttribute($value)
-    {
-        $this->attributes['firstname'] = $value . " ,FUTA STUDENT";
-    }
+    // protected function setlastnameAttribute($value)
+    // {
+    //     $this->attributes['lastname'] = "MR ".$value;
+    // }
+    // protected function setfirstnameAttribute($value)
+    // {
+    //     $this->attributes['firstname'] = $value . " ,FUTA STUDENT";
+    // }
 }
