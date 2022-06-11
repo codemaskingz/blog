@@ -19,6 +19,13 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-//route::get('datas',[apicontroller::class,'dummyapi']);
-route::post('datas',[apicontroller::class,'dummyapi']);
+Route::get('dummy.ng',[apicontroller::class,'dummyAPI']);
+Route::get('getting.ng',[apicontroller::class,'getusers']);
+Route::post('adding.ng',[apicontroller::class,'addusers']);
+Route::put('update.ng',[apicontroller::class,'updateusers']);
+Route::delete('delete.ng/{id}',[apicontroller::class,'delete']);
+Route::get('search.ng/{LastName}',[apicontroller::class,'search']);
+Route::post('saving.ng',[apicontroller::class,'testData']);
+
+
 
