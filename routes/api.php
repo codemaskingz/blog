@@ -3,6 +3,7 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\apicontroller;
+use App\Http\Controllers\ApiResourceController;
 
 /*
 |--------------------------------------------------------------------------
@@ -26,6 +27,10 @@ Route::put('update.ng',[apicontroller::class,'updateusers']);
 Route::delete('delete.ng/{id}',[apicontroller::class,'delete']);
 Route::get('search.ng/{LastName}',[apicontroller::class,'search']);
 Route::post('saving.ng',[apicontroller::class,'testData']);
+
+
+Route::apiResource("member",ApiResourceController::class);
+
 
 
 
